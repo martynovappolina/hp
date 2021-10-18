@@ -2,16 +2,12 @@
     position: absolute;
     top: 0vh;
     left: 0vw;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100vw;
     height: 100vh;
-
     backdrop-filter: blur(5px);
-
     transform: translateY(-100vh);
     transition: all 1s;
 }
@@ -33,14 +29,12 @@
     perspective: 1000px;
 }
 
-
 .card {
     position: relative;
     width: 30vw;
     height: 80vh;
     border-radius: 2vh;
     transition: all 1s ease;
- 
     transform-style: preserve-3d;
 }
 
@@ -49,12 +43,12 @@
     height: 80vh;
     border-radius: 2vh;
     transition: all .3s ease;
-	display: block;
-	backface-visibility: hidden;
-    box-shadow: -10vh 7vh 5vh 0 rgba(0, 0, 0,.8);
+    display: block;
+    backface-visibility: hidden;
+    box-shadow: -10vh 7vh 5vh 0 rgba(0, 0, 0, .8);
 }
 
-.back{
+.back {
     position: absolute;
     top: 0px;
     transform: rotateY(180deg);
@@ -78,17 +72,15 @@
 
 .front {
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: rgb(247, 241, 232);
-
 }
 
-.flip {    
-	transform: rotateY(180deg); 
+.flip {
+    transform: rotateY(180deg);
 }
 
 .cancel_frame {
@@ -96,7 +88,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-
     width: 30vw;
 }
 
@@ -104,34 +95,31 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     width: 30vw;
 }
 
 .cancel_char {
     margin: 1vh;
-
     width: 3vh;
     height: 3vh;
     border-radius: 60px;
     cursor: pointer;
-
     background-image: url(/src/icons/cancel.svg);
-    background-color: #D0B99E;;
+    background-color: #D0B99E;
+    ;
 }
 
 .back_char {
     margin: 1vh;
     margin-left: 2vh;
-
     width: 3vh;
     height: 3vh;
     border-radius: 60px;
     cursor: pointer;
-
     background: url(/src/icons/back.svg) no-repeat;
     background-position: center;
-    background-color: #D0B99E;;
+    background-color: #D0B99E;
+    ;
 }
 
 .search_item {
@@ -140,7 +128,6 @@
     margin-right: 1vh;
     border-radius: 100%;
     border: black solid 1px;
-
     background: url(/src/icons/search.svg) no-repeat;
     background-size: 65%;
     background-position-x: 45%;
@@ -162,7 +149,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
     border-radius: 40px;
     border: black solid 1px;
     background-color: rgb(247, 241, 232);
@@ -173,12 +159,15 @@
     margin-right: 2vh;
 }
 
-input, textarea {
-    outline:none;
+input,
+textarea {
+    outline: none;
     border: none;
 }
-input:active, textarea:active {
-    outline:none;
+
+input:active,
+textarea:active {
+    outline: none;
     border: none;
 }
 
@@ -186,11 +175,13 @@ input:active, textarea:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* This attribute centeres all content, so you cant see the first part of the list */
+    /* justify-content: center; */
     overflow: auto;
-
     width: 25vw;
-    height: 60vh;
+    /* No need to set static height */
+    height: auto;
+    list-style-type: none;
 }
 
 .char_el_name {
@@ -198,14 +189,13 @@ input:active, textarea:active {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     width: 20vw;
     height: 6vh;
 }
 
 @font-face {
-	font-family: 'Harry_Potter'; 
-	src: url(/src/HarryPotter-ov4z.ttf); 
+    font-family: 'Harry_Potter';
+    src: url(/src/HarryPotter-ov4z.ttf);
 }
 
 .char_el_name_text {

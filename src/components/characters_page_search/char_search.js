@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import './char_search.css';
 import $ from 'jquery';
-import Char_info from "./character_info";
+import CharInfo from "./character_info";
 
 const Char_search = ({active, setActive}) => {
     var i = 1;
@@ -18,12 +18,13 @@ const Char_search = ({active, setActive}) => {
         }
     }))
 
-    var [dataa, setDataa] = useState([]);
+    var [data, setData] = useState([]);
     var [char, setChar] = useState([]);
     const [CharName, SetCharName] = useState("");
     const [charInfoActive, setCharInfoActive] = useState(false);
 
-    fetch("http://hp-api.herokuapp.com/api/characters")
+    useEffect(() => {
+      fetch("http://hp-api.herokuapp.com/api/characters")
         .then(res => {
             if(res.ok) {
                 return res.json();
@@ -34,9 +35,10 @@ const Char_search = ({active, setActive}) => {
             }
         })
         .then(data => {
-            dataa = setDataa(data);
+            setData(data);
         }) 
         .catch(error => console.log(error))
+    }, []);
 
     function char_infoo(c) {
         setActive(false); 
@@ -61,29 +63,34 @@ const Char_search = ({active, setActive}) => {
                                     onChange = {event => {SetCharName(event.target.value)}}
                                     />  
                             </div>  
-                            <div className = "char_el_list">
-                                {dataa.filter(char => {
-                                    if(CharName == "") {
-                                        return char;
-                                    } else if (char.name.toLowerCase().includes(CharName.toLowerCase())) {
-                                        return char;
-                                    }
-                                }).map(char => (
-                                    <div key = {char.name}>
-                                    <div className = "char_el_name">
-                                        <div className = "char_el_img"></div>
-                                        <div className = "char_el_name_text" onClick = {(char) => char_infoo(char)}>{char.name}</div>
-                                    </div>
-                                    </div>
+                            <ul className = "char_el_list">
+                                {
+                                  data
+                                    .filter(char => {
+                                      if(CharName === "") {
+                                          return char;
+                                      } else if (char.name.toLowerCase().includes(CharName.toLowerCase())) {
+                                          return char;
+                                      } else {
+                                        return "";
+                                      }
+                                    })
+                                    .map(char => (
+                                        <li key = {char.name}>
+                                          <div className = "char_el_name">
+                                              <div className = "char_el_img"></div>
+                                              <div className = "char_el_name_text" onClick = {(char) => char_infoo(char)}>{char.name}</div>
+                                          </div>
+                                        </li>
                                     ))
                                 }
-                            </div> 
+                            </ul> 
                         </div>
                         <div className = 'side back one'></div>
                     </div>
                 </div>
             </div>
-            <Char_info char = {char} active = {charInfoActive} setActive = {setCharInfoActive}/>
+            <CharInfo char = {char} active = {charInfoActive} setActive = {setCharInfoActive}/>
         </>
     );
 };
