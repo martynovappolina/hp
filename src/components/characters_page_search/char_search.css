@@ -1,0 +1,232 @@
+.main {
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: blur(5px);
+
+    transform: translateY(-100vh);
+    transition: all 1s;
+}
+
+.main.active {
+    transform: translateY(0);
+    transition: all 0.4s;
+}
+
+.main.active1 {
+    transform: translateY(0);
+    transition: all 1.1s;
+}
+
+.card-block {
+    transition: all .5s ease;
+    width: 30vw;
+    height: 80vh;
+    perspective: 1000px;
+}
+
+
+.card {
+    position: relative;
+    width: 30vw;
+    height: 80vh;
+    border-radius: 2vh;
+    transition: all 1s ease;
+ 
+    transform-style: preserve-3d;
+}
+
+.side {
+    width: 30vw;
+    height: 80vh;
+    border-radius: 2vh;
+    transition: all .3s ease;
+	display: block;
+	backface-visibility: hidden;
+    box-shadow: -10vh 7vh 5vh 0 rgba(0, 0, 0,.8);
+}
+
+.back{
+    position: absolute;
+    top: 0px;
+    transform: rotateY(180deg);
+}
+
+.one {
+    background: url('../../imgs/char_back_side_all.png') no-repeat;
+    background-size: cover;
+}
+
+.three {
+    background: url('../../imgs/char_back_side_stuff.png') no-repeat;
+    background-size: cover;
+    background-position-y: +50%;
+}
+
+.two {
+    background: url('../../imgs/char_back_side_stud.png') no-repeat;
+    background-size: cover;
+}
+
+.front {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(247, 241, 232);
+
+}
+
+.flip {    
+	transform: rotateY(180deg); 
+}
+
+.cancel_frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 30vw;
+}
+
+.cancel_frame_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 30vw;
+}
+
+.cancel_char {
+    margin: 1vh;
+
+    width: 3vh;
+    height: 3vh;
+    border-radius: 60px;
+    cursor: pointer;
+
+    background-image: url(/src/icons/cancel.svg);
+    background-color: #D0B99E;;
+}
+
+.back_char {
+    margin: 1vh;
+    margin-left: 2vh;
+
+    width: 3vh;
+    height: 3vh;
+    border-radius: 60px;
+    cursor: pointer;
+
+    background: url(/src/icons/back.svg) no-repeat;
+    background-position: center;
+    background-color: #D0B99E;;
+}
+
+.search_item {
+    width: 3vh;
+    height: 3vh;
+    margin-right: 1vh;
+    border-radius: 100%;
+    border: black solid 1px;
+
+    background: url(/src/icons/search.svg) no-repeat;
+    background-size: 65%;
+    background-position-x: 45%;
+    background-position-y: 35%;
+    background-color: rgb(241, 227, 204);
+}
+
+.search_item:hover {
+    cursor: pointer;
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: rgb(235, 210, 170);
+}
+
+.search {
+    width: 15vw;
+    height: 5vh;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    border-radius: 40px;
+    border: black solid 1px;
+    background-color: rgb(247, 241, 232);
+}
+
+.search_input {
+    background-color: rgb(247, 241, 232);
+    margin-right: 2vh;
+}
+
+input, textarea {
+    outline:none;
+    border: none;
+}
+input:active, textarea:active {
+    outline:none;
+    border: none;
+}
+
+.char_el_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+
+    width: 25vw;
+    height: 60vh;
+}
+
+.char_el_name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 20vw;
+    height: 6vh;
+}
+
+@font-face {
+	font-family: 'Harry_Potter'; 
+	src: url(/src/HarryPotter-ov4z.ttf); 
+}
+
+.char_el_name_text {
+    flex-shrink: 0;
+    font-family: Harry_Potter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4vh;
+    cursor: pointer;
+}
+
+.char_el_name_text:hover {
+    color: rgb(131, 33, 33);
+    font-size: 4.5vh;
+}
+
+.char_el_img {
+    flex-shrink: 0;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 100%;
+    background-image: url("https://raw.githubusercontent.com/fedeperin/harry-potter-api-english/main/images/harry_potter.png");
+    background-size: cover;
+}

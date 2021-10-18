@@ -1,0 +1,106 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 7vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: linear-gradient(90deg, #ABCDE0 30%, #E7CBC7 96.63%);
+    background-size: cover;
+}
+
+.background_pic_1 {
+    position: absolute;
+    width: 24%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    background-image: url(./imgs/back_pic_1.png);
+    background-size: cover;
+} 
+
+.background_pic_1::before {
+    content: ' ';
+    display: block;
+    width: 35%;
+    height: 100%;
+    margin-left: 85%;
+    transform: scale(1.2);
+
+    background-image: url(./imgs/back_pic_1.png);
+    background-position: 65% 0%;
+    background-size: cover;
+
+    filter: blur(95px);
+    -webkit-filter: blur(95px);
+    -moz-filter: blur(95px);
+    -o-filter: blur(95px);
+    -ms-filter: blur(95px);
+}
+
+.background_pic_2 {
+    position: absolute;
+    width: 24%;
+    height: 100vh;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    background-image: url(./imgs/back_pic_2.png);
+    background-size: cover;
+    background-position-x: 25%;
+} 
+
+.background_pic_2::before {
+    content: ' ';
+    display: block;
+    width: 35%;
+    height: 100%;
+    margin-left: -10%; 
+    transform: scale(1.05);
+
+    background: url(./imgs/back_pic_2.png) no-repeat;
+    background-size: cover;
+    background-position: 25% 0%;
+
+    filter: blur(95px);
+    -webkit-filter: blur(90px);
+    -moz-filter: blur(95px);
+    -o-filter: blur(95px);
+    -ms-filter: blur(95px);
+}  
+
+.burger {
+    position: absolute;
+    width: 5vh;
+    height: 4vh;
+    left: 4vh;
+    top: 4vh;
+
+    background: url(./icons/burger.svg);
+    background-size: cover;
+
+}
+
+.burger:hover {
+    width: 5.5vh;
+    height: 4.5vh;
+    cursor: pointer;
+}
+
+
+
+
+
+

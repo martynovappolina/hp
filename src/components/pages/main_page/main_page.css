@@ -1,0 +1,128 @@
+.main_main_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    height: 81vh;
+    width: 45vw;
+}
+
+.hp_title {
+    width: 90vh;
+    height: 25vh;
+    margin: 2vh;
+
+    background: url(/src/imgs/hp_title.png) no-repeat; 
+    background-size: cover;
+
+}
+
+.main_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100vh;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 37vh;
+    width: 80vh;
+    margin: 1vh;
+}
+
+.rec_menu {
+    display: flex;
+    justify-content: center;
+    width: 80vh;
+    height: 6vh;
+    
+    background: #D0B99E;
+    border-radius: 60px;
+    
+}
+
+.rec_menu:hover {
+    width: 80.5vh;
+    height: 6.5vh;
+    background: #c79964;
+    cursor: pointer;
+}
+
+@font-face {
+	font-family: 'Harry_Potter'; 
+	src: url(/src/HarryPotter-ov4z.ttf); 
+}
+
+.text_title_menu { 
+    font-family: Harry_Potter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6vh;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-decoration: #D0B99E;
+    
+    color: #000000;
+    cursor: pointer;
+    
+}
+
+@font-face {
+	font-family: 'Harlow Solid Italic'; 
+	src: url(/src/Harlow\ Solid\ Italic.ttf); 
+}
+
+.happiness {
+    width: 80vh;
+
+    font-family: Harlow Solid Italic;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 4vh;
+    line-height: 4vh;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    
+    color: #5c5a5a;
+    cursor: default;
+
+}
+
+.feedback_frame {
+    width: 7vh;
+    height: 7vh;
+}
+
+.feedback.active {
+    width: 7vh;
+    height: 6vh;
+    margin-top: 5vh;
+
+    background: url(/src/icons/feedback.svg) ;
+    background-size: cover;
+    background-position-y: 150%;
+
+    transform: scale(1);
+    transition: all 0.2s;
+}
+
+.feedback {
+    transform: scale(0);
+    transition: all 0.2s;
+}
+
+.feedback:hover {
+    width: 7.5vh;
+    height: 6.5vh;
+    cursor: pointer;
+}

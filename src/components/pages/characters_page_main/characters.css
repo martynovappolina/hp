@@ -1,0 +1,194 @@
+.characters_title {
+    font-family: Harry Potter;
+    font-size: 13vh;
+    line-height: 13vh;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.characters_title:hover {
+    cursor: default;
+}
+
+.characters_card_all {
+    position: absolute;
+    top: 17vh;
+    left: 35vw;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 45vh;
+    height: 45vh;
+}
+
+.characters_all {
+    width: 45vh;
+    height: 45vh;
+    border-radius: 100%;
+    transition: transform 0.2s;
+    
+    background: url(../../../imgs/all_char.png) no-repeat;
+    background-size: cover;
+}
+
+.characters_card_students {
+    position: absolute;
+    top: 52vh;
+    left: 37vw;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 45vh;
+    height: 45vh;
+}
+
+.characters_students {
+    width: 45vh;
+    height: 45vh;
+    border-radius: 100%;
+    transition: transform 0.2s;
+    
+    background: url(../../../imgs/stud.png) no-repeat;
+    background-size: cover;
+}
+
+
+.characters_card_stuff {
+    position: absolute;
+    top: 32vh;
+    left: 47vw;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 45vh;
+    height: 45vh;
+}
+
+.characters_stuff {
+    width: 45vh;
+    height: 45vh;
+    border-radius: 100%;
+    transition: transform 0.2s;
+
+    background: url(../../../imgs/stuff.png) no-repeat;
+    background-size: cover;
+}
+
+.cont_link_all {
+    position: absolute;
+    top: 20vh;
+    left: 32vw;
+    width: 20vh;
+    height: 20vh;
+}
+
+.cont_link_stud {
+    position: absolute;
+    top: 79vh;
+    left: 52vw;
+    width: 20vh;
+    height: 20vh;
+}
+
+.cont_link_stuff {
+    position: absolute;
+    top: 30vh;
+    left: 63vw;
+    width: 20vh;
+    height: 20vh;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    border: black solid 0.2vh;
+    background-color: rgba(255, 235, 205, 0.527);
+}
+
+.link:hover {
+    cursor: pointer;
+    width: 20.5vh;
+    height: 20.5vh;
+}
+
+.text_link {
+    font-family: Harry_Potter;
+    font-weight: thin;
+    font-size: 3vh;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.c1 {
+    position: absolute;
+    top: 15vh;
+    left: 65vw;
+
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    background: linear-gradient(60deg, rgb(139, 146, 245) 36%, #3d3a6b 96%);
+    opacity: 0.1;
+}
+
+.c2 {
+    position: absolute;
+    top: 11vh;
+    left: 50vw;
+
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    background: linear-gradient(60deg, rgb(139, 146, 245) 36%, #3d3a6b 96%);
+    opacity: 0.3;
+}
+
+.c3 {
+    position: absolute;
+    top: 23vh;
+    left: 55vw;
+
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    background: linear-gradient(60deg, rgb(139, 146, 245) 36%, #3d3a6b 96%);
+    opacity: 0.4;
+}
+
+.c4 {
+    position: absolute;
+    top: 50vh;
+    left: 33vw;
+
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    background: linear-gradient(60deg, #3d3a6b 16%, rgb(139, 146, 245) 76%);
+    opacity: 0.4;
+}
+
+.c5 {
+    position: absolute;
+    top: 65vh;
+    left: 30vw;
+
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    background: linear-gradient(60deg, #3d3a6b 16%, rgb(139, 146, 245) 76%);
+    opacity: 0.3;
+}
+
+.c6 {
+    position: absolute;
+    top: 68vh;
+    left: 25vw;
+
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    background: linear-gradient(60deg, #3d3a6b 16%, rgb(139, 146, 245) 76%);
+    opacity: 0.1;
+}
