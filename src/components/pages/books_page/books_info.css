@@ -1,0 +1,140 @@
+.main_book {
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: blur(5px);
+
+    transform: translateY(-100vh);
+    transition: all 1s;
+}
+
+.main_book.active {
+    transform: translateY(0);
+    transition: all 0.4s;
+}
+
+.main_book.active1 {
+    transform: translateY(0);
+    transition: all 1.1s;
+}
+
+.card-block_book {
+    transition: all .5s ease;
+    width: 30vw;
+    height: 80vh;
+    perspective: 1000px;
+}
+
+
+.card_book {
+    position: relative;
+    width: 30vw;
+    height: 80vh;
+    border-radius: 2vh;
+    transition: all 1s ease;
+ 
+    transform-style: preserve-3d;
+}
+
+.side_book {
+    width: 30vw;
+    height: 80vh;
+    border-radius: 2vh;
+    transition: all .3s ease;
+	display: block;
+	backface-visibility: hidden;
+    box-shadow: -10vh 7vh 5vh 0 rgba(0, 0, 0, .8);
+}
+
+.front_book {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(247, 241, 232);
+
+}
+
+.back_book{
+    position: absolute;
+    top: 0px;
+    transform: rotateY(180deg);
+    background: url(../../../imgs/books.png) no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+.cancel_frame_book {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 30vw;
+}
+
+.cancel_frame_info_book {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 30vw;
+}
+
+.cancel_book {
+    margin: 1vh;
+
+    width: 3vh;
+    height: 3vh;
+    border-radius: 60px;
+    cursor: pointer;
+
+    background-image: url(/src/icons/cancel.svg);
+    background-color: #D0B99E;
+}
+
+.book_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+
+    width: 26vw;
+    height: 70vh;
+}
+
+.book_str {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 23vw;
+}
+
+.book_item_name{
+    font-family: Harry_Potter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4vh;
+    cursor: pointer;
+
+    width: 9vw;
+}
+
+.book_item_info {
+    width: 14vw;
+    font-size: 3vh;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent;  
+}

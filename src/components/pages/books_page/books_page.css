@@ -1,0 +1,161 @@
+.books_title {
+    font-family: Harry Potter;
+    font-size: 13vh;
+    line-height: 13vh;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.books_title:hover {
+    cursor: default;
+}
+
+.cube_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    height: 70vh;
+    perspective: 50vh;
+}
+
+.cube {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+}
+
+.cube_side {
+    position: absolute;
+    width: 20vh;
+    height: 30vh;
+    font-family: Harry Potter;
+    font-size: 7vh;
+    text-align: center;
+}
+
+.cube_side:hover {
+    cursor: pointer;
+}
+
+.cube_front {
+    transform: translateZ(24.14vh);
+    background: url(../../../imgs/book_1.png) no-repeat;
+    background-size: cover;
+}
+
+.cube_back {
+    transform: rotateY(180deg) translateZ(24.14vh);
+    background: url(../../../imgs/book_5.png) no-repeat;
+    background-size: cover;
+}
+
+.cube_right {
+    transform: rotateY(90deg) translateZ(24.14vh);
+    background: url(../../../imgs/book_3.png) no-repeat;
+    background-size: cover;
+}
+
+.cube_left {
+    transform: rotateY(-90deg) translateZ(24.14vh);
+    background: url(../../../imgs/book_7.png) no-repeat;
+    background-size: cover;
+}
+
+.cube_one {
+    transform: rotateY(45deg) translateZ(24.14vh);
+    background: url(../../../imgs/book_2.png) no-repeat;
+    background-size: cover;
+}
+
+.cube_two {
+    transform: rotateY(-45deg) translateZ(24.14vh);
+    background: url(../../../imgs/book_8.png) no-repeat;
+    background-size: cover;
+}
+
+.cube_three {
+    transform: rotateY(135deg) translateZ(24.14vh);
+    background: url(../../../imgs/book_4.png) no-repeat;
+    background-size: cover;
+}
+
+.cube_four {
+    transform: rotateY(-135deg) translateZ(24.14vh);
+    background: url(../../../imgs/book_6.png) no-repeat;
+    background-size: cover;
+}
+
+.cube_top {
+    width: 48.28vh;
+    height: 48.28vh;
+    transform: rotateX(90deg) translateZ(15vh);
+    position: relative;
+    clip-path: polygon(29% 0%, 71% 0%, 100% 29%, 100% 71%, 71% 100%, 29% 100%, 0% 71%, 0% 29%);
+    background: url(../../../imgs/top.gif) no-repeat;
+    background-size: cover;
+    background-position-x: 30%;
+}
+
+.cube_bottom {
+    width: 48.28vh;
+    height: 48.28vh;
+    transform: rotateX(-90deg) translateZ(15vh);
+    clip-path: polygon(29% 0%, 71% 0%, 100% 29%, 100% 71%, 71% 100%, 29% 100%, 0% 71%, 0% 29%);
+    background: url(../../../imgs/bottom.gif) no-repeat;
+    background-size: cover;
+    background-position-x: 40%;
+}
+
+.cube_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 48.28vh;
+    height: 48.28vh;
+
+    clip-path: polygon(29% 0%, 71% 0%, 100% 29%, 100% 71%, 71% 100%, 29% 100%, 0% 71%, 0% 29%);
+    filter: blur(10rem);
+    opacity: 0.5;
+    transform: rotateX(-90deg) translateZ(30vh) translateX(25.5vh) translateY(0.2vh);
+    background: black;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    margin-bottom: -3vh;
+    animation: 3s blinker linear infinite;
+    animation-iteration-count: 3;
+}
+
+.left {
+    height: 5vh;
+    width: 5vh;
+
+    margin-right: 0.5vh;
+
+    background: url('../../../icons/keyboard-left.svg') no-repeat;
+    background-size: cover;
+}
+
+.right {
+    height: 5vh;
+    width: 5vh;
+    
+    background: url('../../../icons/keyboard-right.svg') no-repeat;
+    background-size: cover;
+}
+
+@keyframes blinker {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.0; }
+    100% { opacity: 0.3; }
+    }

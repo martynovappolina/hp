@@ -106,7 +106,7 @@
     cursor: pointer;
     background-image: url(/src/icons/cancel.svg);
     background-color: #D0B99E;
-    ;
+
 }
 
 .back_char {
@@ -119,7 +119,7 @@
     background: url(/src/icons/back.svg) no-repeat;
     background-position: center;
     background-color: #D0B99E;
-    ;
+
 }
 
 .search_item {
@@ -140,15 +140,18 @@
     width: 3.5vh;
     height: 3.5vh;
     background-color: rgb(235, 210, 170);
+
 }
 
 .search {
     width: 15vw;
     height: 5vh;
     margin-bottom: 3vh;
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
     border-radius: 40px;
     border: black solid 1px;
     background-color: rgb(247, 241, 232);
@@ -157,6 +160,9 @@
 .search_input {
     background-color: rgb(247, 241, 232);
     margin-right: 2vh;
+    height: 2vh;
+    font-size: 2vh;
+    text-align: center;
 }
 
 input,
@@ -171,10 +177,19 @@ textarea:active {
     border: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 .char_el_list {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    overflow: auto;
+    width: 25vw;
+    height: auto;
+
     /* This attribute centeres all content, so you cant see the first part of the list */
     /* justify-content: center; */
     overflow: auto;
@@ -182,6 +197,7 @@ textarea:active {
     /* No need to set static height */
     height: auto;
     list-style-type: none;
+
 }
 
 .char_el_name {
@@ -220,3 +236,75 @@ textarea:active {
     background-image: url("https://raw.githubusercontent.com/fedeperin/harry-potter-api-english/main/images/harry_potter.png");
     background-size: cover;
 }
+
+.char_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    width: 26vw;
+    height: 70vh;
+}
+
+.char_str {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 23vw;
+}
+
+.wand {
+    width: 8vw;
+}
+
+.char_item_name {
+    font-family: Harry_Potter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4vh;
+    cursor: pointer;
+    width: 15vw;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.char_item_info {
+    width: 8vw;
+    font-size: 3vh;
+}
+
+.char_item_wand {
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar { 
+    width: 0px;  
+    background: transparent; 
+}
+
+.double_click {
+    position: absolute;
+    right: 3vh;
+    top: 7vh;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 100%;
+    border: black solid 0.1vh;
+    opacity: 0;
+    background: url(../../icons/click.svg) no-repeat;
+    background-size: 80%;
+    background-position: center;
+    
+    animation-timing-function: ease; 
+    animation: 2s double linear infinite;
+    animation-iteration-count: 5;
+}
+
+@keyframes double {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+    }
