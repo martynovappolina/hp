@@ -1,7 +1,11 @@
+
 import React, {useEffect, useState} from "react";
+
+import React, { useEffect, useState } from "react";
+
 import './char_search.css';
 import $ from 'jquery';
-import Char_info from "./character_info";
+import CharInfo from "./character_info";
 
 const Char_search = ({n, active, setActive}) => {
     var i = 1;
@@ -17,6 +21,7 @@ const Char_search = ({n, active, setActive}) => {
     }))
 
     var [data, setData] = useState([]);
+
     var [char, setChar] = useState({});
     const [CharName, SetCharName] = useState("");
     const [charInfoActive, setCharInfoActive] = useState(false);
@@ -34,6 +39,27 @@ const Char_search = ({n, active, setActive}) => {
         request.onload = function() {
             setData(request.response)
         }
+
+    var [char, setChar] = useState([]);
+    const [CharName, SetCharName] = useState("");
+    const [charInfoActive, setCharInfoActive] = useState(false);
+
+    useEffect(() => {
+      fetch("http://hp-api.herokuapp.com/api/characters")
+        .then(res => {
+            if(res.ok) {
+                return res.json();
+            }
+            else {
+                console.log("ERROR")
+                throw Error
+            }
+        })
+        .then(data => {
+            setData(data);
+        }) 
+        .catch(error => console.log(error))
+
     }, []);
 
     function char_infoo(c) {
@@ -76,7 +102,11 @@ const Char_search = ({n, active, setActive}) => {
                                         <li key = {char.name}>
                                           <div className = "char_el_name">
                                               <div className = "char_el_img"></div>
+
                                               <div className = "char_el_name_text" onClick = {() => char_infoo(char)}>{char.name}</div>
+
+                                              <div className = "char_el_name_text" onClick = {(char) => char_infoo(char)}>{char.name}</div>
+
                                           </div>
                                         </li>
                                     ))
@@ -88,7 +118,11 @@ const Char_search = ({n, active, setActive}) => {
                     </div>
                 </div>
             </div>
+
             <Char_info n = {n} char = {char} active = {charInfoActive} setActive = {setCharInfoActive}/>
+
+            <CharInfo char = {char} active = {charInfoActive} setActive = {setCharInfoActive}/>
+
         </>
     );
 };

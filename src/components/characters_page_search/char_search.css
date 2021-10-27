@@ -106,6 +106,7 @@
     cursor: pointer;
     background-image: url(/src/icons/cancel.svg);
     background-color: #D0B99E;
+
 }
 
 .back_char {
@@ -118,12 +119,39 @@
     background: url(/src/icons/back.svg) no-repeat;
     background-position: center;
     background-color: #D0B99E;
+
+}
+
+.search_item {
+    width: 3vh;
+    height: 3vh;
+    margin-right: 1vh;
+    border-radius: 100%;
+    border: black solid 1px;
+    background: url(/src/icons/search.svg) no-repeat;
+    background-size: 65%;
+    background-position-x: 45%;
+    background-position-y: 35%;
+    background-color: rgb(241, 227, 204);
+}
+
+.search_item:hover {
+    cursor: pointer;
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: rgb(235, 210, 170);
+
 }
 
 .search {
     width: 15vw;
     height: 5vh;
     margin-bottom: 3vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
     border-radius: 40px;
     border: black solid 1px;
     background-color: rgb(247, 241, 232);
@@ -157,9 +185,19 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     overflow: auto;
     width: 25vw;
     height: auto;
+
+    /* This attribute centeres all content, so you cant see the first part of the list */
+    /* justify-content: center; */
+    overflow: auto;
+    width: 25vw;
+    /* No need to set static height */
+    height: auto;
+    list-style-type: none;
+
 }
 
 .char_el_name {

@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React/*, {useState}*/ from "react";
 import './char_search.css';
 import $ from 'jquery';
-import Char_search from "./char_search";
+// import Char_search from "./char_search";
 
 const Char_info = ({n, char, active, setActive}) => {
     var i = 1;

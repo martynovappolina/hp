@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 import Menu from '../../../components/menu/menu';
-import Char_search from "../../characters_page_search/char_search";
+import CharSearch from "../../characters_page_search/char_search";
 
 import "../../../background.css"
 import './characters.css'
@@ -117,7 +117,11 @@ const Characters = () => {
           </div>
         </div>
         <Menu active = {menuActive} setActive = {setMenuActive} items = {items}/>
+
         <Char_search n = {n} active = {charSearchActive} setActive = {setCharSearchActive}/>
+
+        <CharSearch active = {charSearchActive} setActive = {setCharSearchActive}/>
+
 
       </>
     );   
