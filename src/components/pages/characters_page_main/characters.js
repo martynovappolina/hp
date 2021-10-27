@@ -57,6 +57,23 @@ const Characters = () => {
   {value:"c", href:'./main', icon: ""},
   {value:"d", href:'./main', icon: ""}]
 
+  var [n, setN] = useState(0) // all/characters/stuff
+  
+  function all() {
+    setN(1)
+    setCharSearchActive(!charSearchActive)
+  }
+
+  function stud() {
+    setN(2)
+    setCharSearchActive(!charSearchActive)
+  }
+
+  function stuff() {
+    setN(3)
+    setCharSearchActive(!charSearchActive)
+  }
+  
     return (
       <>
         <div className = "background">
@@ -84,23 +101,23 @@ const Characters = () => {
           </div>
 
           <div className = "cont_link_all">
-            <div className = "link" onClick = {() => setCharSearchActive(!charSearchActive)}>
+            <div className = "link" onClick = {() => all()}>
               <div className = "text_link">All charecters</div>
             </div>
           </div>
           <div className = "cont_link_stud">
-            <div className = "link">
+            <div className = "link" onClick = {() => stud()}>
               <div className = "text_link">Hogwarts students</div>
             </div>
           </div>
           <div className = "cont_link_stuff">
-            <div className = "link">
+            <div className = "link" onClick = {() => stuff()}>
               <div className = "text_link">Hogwarts stuff</div>
             </div>
           </div>
         </div>
         <Menu active = {menuActive} setActive = {setMenuActive} items = {items}/>
-        <Char_search active = {charSearchActive} setActive = {setCharSearchActive}/>
+        <Char_search n = {n} active = {charSearchActive} setActive = {setCharSearchActive}/>
 
       </>
     );   

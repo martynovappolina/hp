@@ -2,16 +2,12 @@
     position: absolute;
     top: 0vh;
     left: 0vw;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100vw;
     height: 100vh;
-
     backdrop-filter: blur(5px);
-
     transform: translateY(-100vh);
     transition: all 1s;
 }
@@ -33,14 +29,12 @@
     perspective: 1000px;
 }
 
-
 .card {
     position: relative;
     width: 30vw;
     height: 80vh;
     border-radius: 2vh;
     transition: all 1s ease;
- 
     transform-style: preserve-3d;
 }
 
@@ -49,12 +43,12 @@
     height: 80vh;
     border-radius: 2vh;
     transition: all .3s ease;
-	display: block;
-	backface-visibility: hidden;
-    box-shadow: -10vh 7vh 5vh 0 rgba(0, 0, 0,.8);
+    display: block;
+    backface-visibility: hidden;
+    box-shadow: -10vh 7vh 5vh 0 rgba(0, 0, 0, .8);
 }
 
-.back{
+.back {
     position: absolute;
     top: 0px;
     transform: rotateY(180deg);
@@ -78,17 +72,15 @@
 
 .front {
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: rgb(247, 241, 232);
-
 }
 
-.flip {    
-	transform: rotateY(180deg); 
+.flip {
+    transform: rotateY(180deg);
 }
 
 .cancel_frame {
@@ -96,7 +88,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-
     width: 30vw;
 }
 
@@ -104,65 +95,35 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     width: 30vw;
 }
 
 .cancel_char {
     margin: 1vh;
-
     width: 3vh;
     height: 3vh;
     border-radius: 60px;
     cursor: pointer;
-
     background-image: url(/src/icons/cancel.svg);
-    background-color: #D0B99E;;
+    background-color: #D0B99E;
 }
 
 .back_char {
     margin: 1vh;
     margin-left: 2vh;
-
     width: 3vh;
     height: 3vh;
     border-radius: 60px;
     cursor: pointer;
-
     background: url(/src/icons/back.svg) no-repeat;
     background-position: center;
-    background-color: #D0B99E;;
-}
-
-.search_item {
-    width: 3vh;
-    height: 3vh;
-    margin-right: 1vh;
-    border-radius: 100%;
-    border: black solid 1px;
-
-    background: url(/src/icons/search.svg) no-repeat;
-    background-size: 65%;
-    background-position-x: 45%;
-    background-position-y: 35%;
-    background-color: rgb(241, 227, 204);
-}
-
-.search_item:hover {
-    cursor: pointer;
-    width: 3.5vh;
-    height: 3.5vh;
-    background-color: rgb(235, 210, 170);
+    background-color: #D0B99E;
 }
 
 .search {
     width: 15vw;
     height: 5vh;
     margin-bottom: 3vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
     border-radius: 40px;
     border: black solid 1px;
     background-color: rgb(247, 241, 232);
@@ -171,26 +132,34 @@
 .search_input {
     background-color: rgb(247, 241, 232);
     margin-right: 2vh;
+    height: 2vh;
+    font-size: 2vh;
+    text-align: center;
 }
 
-input, textarea {
-    outline:none;
+input,
+textarea {
+    outline: none;
     border: none;
 }
-input:active, textarea:active {
-    outline:none;
+
+input:active,
+textarea:active {
+    outline: none;
     border: none;
+}
+
+li {
+    list-style-type: none;
 }
 
 .char_el_list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     overflow: auto;
-
     width: 25vw;
-    height: 60vh;
+    height: auto;
 }
 
 .char_el_name {
@@ -198,14 +167,13 @@ input:active, textarea:active {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     width: 20vw;
     height: 6vh;
 }
 
 @font-face {
-	font-family: 'Harry_Potter'; 
-	src: url(/src/HarryPotter-ov4z.ttf); 
+    font-family: 'Harry_Potter';
+    src: url(/src/HarryPotter-ov4z.ttf);
 }
 
 .char_el_name_text {
@@ -230,3 +198,75 @@ input:active, textarea:active {
     background-image: url("https://raw.githubusercontent.com/fedeperin/harry-potter-api-english/main/images/harry_potter.png");
     background-size: cover;
 }
+
+.char_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    width: 26vw;
+    height: 70vh;
+}
+
+.char_str {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 23vw;
+}
+
+.wand {
+    width: 8vw;
+}
+
+.char_item_name {
+    font-family: Harry_Potter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4vh;
+    cursor: pointer;
+    width: 15vw;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.char_item_info {
+    width: 8vw;
+    font-size: 3vh;
+}
+
+.char_item_wand {
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar { 
+    width: 0px;  
+    background: transparent; 
+}
+
+.double_click {
+    position: absolute;
+    right: 3vh;
+    top: 7vh;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 100%;
+    border: black solid 0.1vh;
+    opacity: 0;
+    background: url(../../icons/click.svg) no-repeat;
+    background-size: 80%;
+    background-position: center;
+    
+    animation-timing-function: ease; 
+    animation: 2s double linear infinite;
+    animation-iteration-count: 5;
+}
+
+@keyframes double {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+    }
