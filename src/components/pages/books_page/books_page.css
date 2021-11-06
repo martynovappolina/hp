@@ -133,12 +133,11 @@
     opacity: 0;
     margin-bottom: -3vh;
     animation: 3s blinker linear infinite;
-    animation-iteration-count: 3;
 }
 
 .left {
-    height: 5vh;
-    width: 5vh;
+    height: 3vh;
+    width: 3vh;
 
     margin-right: 0.5vh;
 
@@ -147,8 +146,8 @@
 }
 
 .right {
-    height: 5vh;
-    width: 5vh;
+    height: 3vh;
+    width: 3vh;
     
     background: url('../../../icons/keyboard-right.svg') no-repeat;
     background-size: cover;

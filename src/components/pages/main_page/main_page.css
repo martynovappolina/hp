@@ -82,11 +82,13 @@
 }
 
 .happiness {
-    width: 80vh;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 86vh;
+    height: 12vh;
 
     font-family: Harlow Solid Italic;
     font-style: italic;
-    font-weight: 100;
     font-size: 4vh;
     line-height: 4vh;
     text-align: center;
@@ -96,6 +98,29 @@
     color: #5c5a5a;
     cursor: default;
 
+}
+
+.happiness span {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.span_active {
+    animation: smoke 3s linear forwards;
+}
+
+@keyframes smoke {
+    20% {
+        color: rgb(180, 168, 62);
+    }
+    40% {
+        color: rgb(194, 107, 107);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateX(40vh) translateY(-40vh) rotateX(720deg) scale(4);
+    }
 }
 
 .feedback_frame {

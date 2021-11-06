@@ -14,10 +14,18 @@ const Main_page = () => {
     {value:"c", href:'./main', icon: ""},
     {value:"d", href:'./main', icon: ""}]
     const [feedbackActive, setFeedbackActive] = useState(false);
-    const items_feedback = 
-    [{value: "instagram", href: 'https://www.instagram.com/several_people_inside/', icon: '/src/icons/instagram.svg'},
-     {value: "vk", href: 'https://vk.com/id209059953', icon: '/src/icons/vk.svg'}]
-    
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const text = document.querySelector('.happiness');
+        text.innerHTML = text.textContent.replace(/\S/g, '<span>$&</span>');
+      });
+
+    function text_effect(event){
+        if(event.target.tagName === 'SPAN') {
+            event.target.classList.add('span_active');
+        }
+    }
+
      return (
         <div>
             <div className = "background">
@@ -45,16 +53,15 @@ const Main_page = () => {
                         </div>
                     </div>
 
-                    <div className = "happiness"> Happiness can be found even in the </div>   
-                    <div className = "happiness"> darkest of times, if one only remembers </div>      
-                    <div className = "happiness"> to turn on the light. </div>   
+                    <div className = "happiness" onMouseOver = {(event) => text_effect(event)}> Happiness can be found even in the   
+                    darkest of times, if one only remembers to turn on the light. </div>   
                     
                     <div className = "feedback_frame">
                         <svg className = {feedbackActive ? 'feedback':'feedback active'} 
                         onClick = {() => setFeedbackActive(!feedbackActive)}> </svg>
                     </div>
 
-                    <Feedback active = {feedbackActive} setActive = {setFeedbackActive} items = {items_feedback}/>     
+                    <Feedback active = {feedbackActive} setActive = {setFeedbackActive}/>     
                 </div>
 
             </div>       

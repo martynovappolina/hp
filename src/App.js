@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Main_page from './components/pages/main_page/main_page';
 import Characters from './components/pages/characters_page_main/characters';
 import Books from './components/pages/books_page/books_page';
+import Films from './components/pages/films_page/Films';
+import Spells from './components/pages/spells_page/Spells';
 
 import "./background.css";
 
@@ -15,9 +17,9 @@ function App() {
         <Switch>
           <Route exact path = "/" component = {Main_page}/>
           <Route path = "/characters" component = {Characters}/>
-          {/* <Route exact path = "/spells" component = {Spells}/> */}
+          <Route exact path = "/spells" component = {Spells}/>
           <Route exact path = "/books" component = {Books}/>
-          {/* <Route exact path = "/films" component = {Films}/> */}
+          <Route exact path = "/films" component = {Films}/>
         </Switch>
     </Router>
 

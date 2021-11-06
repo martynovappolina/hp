@@ -38,11 +38,6 @@
     height: 9vh;
     margin: 1vh;
 
-    /* background: url(/src/icons/vk.svg) no-repeat; */
-    background-size: 80%;
-    background-position-x: center;
-    background-position-y: center;
-
     border-radius: 100%;
     border: 0.2vh solid black;
 }
