@@ -61,55 +61,55 @@ $("body").on("mouseleave", "video", function(){
                 <div className = "films_title">Films</div>
                 <div className = "films_main_block">
                     <a href = 'https://www.kinopoisk.ru/film/689/' rel="noreferrer" target="_blank">
-                        <video poster = {film1_png} className = "films_el film_one" muted loop>
+                        <video poster = {film1_png} className = "films_el film_one" loop>
                             <source src = {film1_webm} type = "video/webm"/>
                             <source src = {film1_mp4} type = "video/mp4"/>
                         </video>
                     </a>
                     <a href = 'https://www.kinopoisk.ru/film/688/' rel="noreferrer" target="_blank">
-                        <video poster = {film2_png} className = "films_el film_two" muted loop>
+                        <video poster = {film2_png} className = "films_el film_two" loop>
                             <source src = {film2_webm} type = "video/webm"/>
                             <source src = {film2_mp4} type = "video/mp4"/>
                         </video>
                     </a>    
                     <a href = 'https://www.kinopoisk.ru/film/322/' rel="noreferrer" target="_blank">    
-                        <video poster = {film3_png} className = "films_el film_three" muted loop>
+                        <video poster = {film3_png} className = "films_el film_three" loop>
                             <source src = {film3_webm} type = "video/webm"/>
                             <source src = {film3_mp4} type = "video/mp4"/>
                         </video>
                     </a>
                     <a href = 'https://www.kinopoisk.ru/film/8408/' rel="noreferrer" target="_blank">
-                        <video poster = {film4_png} className = "films_el film_four" muted loop>
+                        <video poster = {film4_png} className = "films_el film_four" loop>
                             <source src = {film4_webm} type = "video/webm"/>
                             <source src = {film4_mp4} type = "video/mp4"/>
                         </video>
                     </a>
                     <a href = 'https://www.kinopoisk.ru/film/48356/' rel="noreferrer" target="_blank">    
-                        <video poster = {film5_png} className = "films_el film_five" muted loop>
+                        <video poster = {film5_png} className = "films_el film_five" loop>
                             <source src = {film5_webm} type = "video/webm"/>
                             <source src = {film5_mp4} type = "video/mp4"/>
                         </video>
                     </a>
                     <a href = 'https://www.kinopoisk.ru/film/89515/' rel="noreferrer" target="_blank">    
-                        <video poster = {film6_png} className = "films_el film_six" muted loop>
+                        <video poster = {film6_png} className = "films_el film_six" loop>
                             <source src = {film6_webm} type = "video/webm"/>
                             <source src = {film6_mp4} type = "video/mp4"/>
                         </video>
                     </a>
                     <a href = 'https://www.kinopoisk.ru/film/276762/' rel="noreferrer" target="_blank">    
-                        <video poster = {film7_png} className = "films_el film_seven" muted loop>
+                        <video poster = {film7_png} className = "films_el film_seven" loop>
                             <source src = {film7_webm} type = "video/webm"/>
                             <source src = {film7_mp4} type = "video/mp4"/>
                         </video>
                     </a>
                     <a href = 'https://www.kinopoisk.ru/film/407636/' rel="noreferrer" target="_blank">    
-                        <video poster = {film8_png} className = "films_el film_eight" muted loop>
+                        <video poster = {film8_png} className = "films_el film_eight" loop>
                             <source src = {film8_webm} type = "video/webm"/>
                             <source src = {film8_mp4} type = "video/mp4"/>
                         </video>
                     </a>    
                 </div>
-                <div className = "click_to_watch">click to watch the movie </div>
+                <div className = "click_to_watch" style = {{fontSize: 2 + "vh"}}>click to watch the movie </div>
             </div> 
 
             <Menu active = { menuActive} setActive = {setMenuActive} items = { items}/> 

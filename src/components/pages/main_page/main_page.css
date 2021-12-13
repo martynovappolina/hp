@@ -35,14 +35,14 @@
     align-items: center;
     justify-content: space-around;
     height: 37vh;
-    width: 80vh;
+    width: 35vw;
     margin: 1vh;
 }
 
 .rec_menu {
     display: flex;
     justify-content: center;
-    width: 80vh;
+    width: 35vw;
     height: 6vh;
     
     background: #D0B99E;
@@ -106,20 +106,26 @@
 }
 
 .span_active {
-    animation: smoke 3s linear forwards;
+    animation: smoke 10s linear forwards;
 }
 
 @keyframes smoke {
-    20% {
+    10% {
         color: rgb(180, 168, 62);
     }
-    40% {
+    20% {
         color: rgb(194, 107, 107);
     }
-    100% {
+    50% {
         opacity: 0;
         filter: blur(20px);
         transform: translateX(40vh) translateY(-40vh) rotateX(720deg) scale(4);
+    }
+    95% {
+        transform: translateX(-40vh) translateY(40vh) rotateX(-720deg) scale(0.25);
+    }
+    100% {
+        opacity: 1;
     }
 }
 

@@ -23,6 +23,10 @@ const Main_page = () => {
     function text_effect(event){
         if(event.target.tagName === 'SPAN') {
             event.target.classList.add('span_active');
+            setTimeout(function() {
+                event.target.classList.remove('span_active');
+            }, (10 * 1000));
+            // event.target.classList.remove('span_active');
         }
     }
 
